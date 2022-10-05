@@ -1,1 +1,1 @@
-0 regex [.|s]*SCHOOL[.|s]* School 
+0 string SCHOOL School 
