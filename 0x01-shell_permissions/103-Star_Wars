@@ -1,2 +1,2 @@
 #!/bin/bash
-chown captain .`
+chown captain .
