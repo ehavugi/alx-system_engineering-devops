@@ -13,7 +13,23 @@ permissions:
   contents: read
 
 jobs:
+  check-for-changes:
+    runs-on: ubuntu-latest
+    # Set job outputs to values from filter step
+    outputs:
+      server: ${{ steps.filter.outputs.jscsshtml }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: github-actions-update
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          python:
+            - '**.py'
   build:
+    needs: check-for-changes
 
     runs-on: ubuntu-latest
 
