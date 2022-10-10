@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     # Set job outputs to values from filter step
     outputs:
-      server: ${{ steps.filter.outputs.jscsshtml }}
+      server: ${{ steps.filter.outputs.python }}
     steps:
     - uses: actions/checkout@v2
       with:
@@ -30,6 +30,7 @@ jobs:
             - '**.py'
   build:
     needs: check-for-changes
+    if: ${{ needs.check-for-changes.outputs.python  == 'true' }}
 
     runs-on: ubuntu-latest
 
