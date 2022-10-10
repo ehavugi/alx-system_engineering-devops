@@ -13,7 +13,24 @@ permissions:
   contents: read
 
 jobs:
+#   check-for-changes:
+#     runs-on: ubuntu-latest
+#     # Set job outputs to values from filter step
+#     outputs:
+#       server: ${{ steps.filter.outputs.python }}
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         ref: github-actions-update
+#     - uses: actions/checkout@v3
+#       id: filter
+#       with:
+#         filters: |
+#           python:
+#             - '**.py'
   build:
+#     needs: check-for-changes
+#     if: ${{ needs.check-for-changes.outputs.python  == 'true' }}
 
     runs-on: ubuntu-latest
 
@@ -36,4 +53,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
+        #echo 'hello'
+        find . ! "git" -type f | xargs ls -ltr | tail -n 2
+
+     #   pytest
