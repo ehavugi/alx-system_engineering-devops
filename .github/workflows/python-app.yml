@@ -55,6 +55,7 @@ jobs:
       run: |
         echo 'hello'
     - name: find latest files 
+      run: |
         find . ! "git" -type f | xargs ls -ltr | tail -n 2
 
      #   pytest
