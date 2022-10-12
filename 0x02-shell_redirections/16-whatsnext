@@ -1,5 +1,2 @@
 #!/bin/bash
-file=/etc/passwd
-line=$(cat $file |sed -n '/root/=' $1)
-cat $file |head -n $line $1
-cat $file |head -n $(($line +3)) $1 |tail -n 3
+cat /etc/passwd|grep root -A 3
