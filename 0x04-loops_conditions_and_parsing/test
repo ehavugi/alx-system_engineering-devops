@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Test the scripts
+LIST="$(ls *)"
+for i in "$LIST"; 
+do
+
+if [ "$i" != "test" ]
+then
+	shellcheck "$i"
+fi
+done
