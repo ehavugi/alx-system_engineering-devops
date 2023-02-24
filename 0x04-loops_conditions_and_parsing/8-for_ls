@@ -7,5 +7,6 @@
 LIST="$(ls  -- *)"
 for  i  in $LIST;
 do
-	echo "$i"
+	a=$(echo "$i"| cut -d - -f2-)
+	echo "$a"
 done
