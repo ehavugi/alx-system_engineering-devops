@@ -1,0 +1,8 @@
+#!/usr/bin/env  bash
+# show bash pid mwithouting using ps
+
+a=$(pidof "bash")
+for x in $a
+do
+echo "$x bash"
+done

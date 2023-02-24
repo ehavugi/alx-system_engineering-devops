@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# return this bash script's own PID
+
+pidof -s -c "bash"

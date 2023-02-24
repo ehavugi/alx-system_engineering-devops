@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# The script stops "4-to_infinity_and_beyond" if running by using kill
+
+#find the pid
+pid_to_kill=$(pidof "4-to_infinity_and_beyond")
+if [ -z "$pid_to_kill" ]
+then
+echo "Not running"
+else
+echo "Killing $pid_to_kill"
+kill pid $pid_to_kill
+fi
