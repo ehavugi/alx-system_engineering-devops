@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Bash script that displays 
+  # Content of current dir
+  # In a list format
+   # Where only the parrt of the name after dash is display (example was given as  a ref)
+
+LIST="$(ls  -- *)"
+for  i  in $LIST;
+do
+	echo "$i"
+done
