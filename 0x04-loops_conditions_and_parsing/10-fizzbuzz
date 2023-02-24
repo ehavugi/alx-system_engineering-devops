@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Displays number 1 to 100
+# requirements
+	# Fizzbuz when number multiple of 3 and 5
+	# Fizz when number is multiple of 3
+	# Fizz whne number is a multiple of 5
+	# otherwise display number 
+	# in a list format
+number="1"
+special="0"
+while [ "$number" -le "100" ];
+do
+	if [ $(("$number" % 3)) -eq "0" ]
+
+then
+echo -n "Fizz"
+: $((special = "1"))
+fi
+if [ $(("$number" % 5)) -eq "0" ]
+then
+echo -n "Buzz"
+: $((special = "1"))
+fi
+if [ "$special" -eq "0" ]
+then
+echo -n "$number"
+fi
+: $((special = "0"))
+echo
+: $(( number++ ))
+done
