@@ -5,7 +5,7 @@
 pid_to_kill=$(pgrep -f "4-to_infinity_and_beyond")
 for id in $pid_to_kill
 do
-if [ -z "$pid_t _kill" ]
+if [ -z "$id" ]
 then 
 exit 
 else
