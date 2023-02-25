@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script displays "To infinity and beyond" indefinitely
+trap  "echo  I am invincible" SIGINT SIGTERM
+i="0"
+while [ "$i" -lt "10" ]
+do
+echo "To infinity and beyond"
+sleep 2
+done

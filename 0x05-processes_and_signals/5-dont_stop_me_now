@@ -2,10 +2,14 @@
 # The script stops "4-to_infinity_and_beyond" if running by using kill
 
 #find the pid
-pid_to_kill=$(pidof "4-to_infinity_and_beyond")
-if [ -z "$pid_to_kill" ]
-then
-echo "Not running"
+pid_to_kill=$(pgrep -f "4-to_infinity_and_beyond")
+for id in $pid_to_kill
+do
+if [ -z "$pid_t _kill" ]
+then 
+exit 
 else
-kill -9 "$pid_to_kill"
+echo "$id"
+kill "$id"
 fi
+done
