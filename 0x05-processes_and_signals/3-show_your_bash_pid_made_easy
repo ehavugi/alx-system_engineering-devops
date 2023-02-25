@@ -1,7 +1,7 @@
 #!/usr/bin/env  bash
 # show bash pid mwithouting using ps
 
-a=$(pidof "bash")
+a=$(pgrep bash) 
 for x in $a
 do
 echo "$x bash"

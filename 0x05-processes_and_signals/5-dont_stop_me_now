@@ -7,6 +7,5 @@ if [ -z "$pid_to_kill" ]
 then
 echo "Not running"
 else
-echo "Killing $pid_to_kill"
-kill pid $pid_to_kill
+kill -9 "$pid_to_kill"
 fi
