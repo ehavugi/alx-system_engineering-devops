@@ -7,15 +7,15 @@
 
 
 trap  "echo  Y U no love me?!" SIGINT
-trap  'echo I hate the kill command  && rm -f /var/run/$0.pid  && exit 0' SIGTERM
-trap 'rm -f /var/run/$0.pid'  SIGQUIT
+trap  'echo I hate the kill command  && rm -f /var/run/myscript.pid  && exit 0' SIGTERM
+trap 'rm -f /var/run/myscript.pid'  SIGQUIT
 
 mypid="$(pidof -s -c "bash")"
 # To infinite and beyond segment
 i="0"
 
 echo "$0"
-echo "$mypid" > "/var/run/${0#./}.pid"
+echo "$mypid" > "/var/run/myscript.pid"
 while [ "$i" -lt "10" ]
 do
 	echo "To infinity and beyond"
