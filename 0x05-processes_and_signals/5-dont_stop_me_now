@@ -3,13 +3,4 @@
 
 #find the pid
 pid_to_kill=$(pgrep -f "4-to_infinity_and_beyond")
-for id in $pid_to_kill
-do
-if [ -z "$id" ]
-then 
-exit 
-else
-echo "$id"
-kill "$id"
-fi
-done
+kill "$pid_to_kill"
