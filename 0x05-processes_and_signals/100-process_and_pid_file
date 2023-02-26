@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# script create file /var/run/my_script.pid with pid value
+# displays to infinite and beyond indefinetely 
+# displays "I hate the kill command when receiving "SIGTERM" signal
+# displays "Y U no love me?!" when recieiving SIGINT signal
+# delete /var/run/myscript.pid and terminates when receiving SIGQUIT and SIGTERM. 
+
+
+trap  "echo  Y U no love me?!" SIGINT
+trap  'echo I hate the kill command  && rm -f /var/run/$0.pid  && exit 0' SIGTERM
+trap 'rm -f /var/run/$0.pid'  SIGQUIT
+
+mypid="$(pidof -s -c "bash")"
+# To infinite and beyond segment
+i="0"
+
+echo "$0"
+echo "$mypid" > "/var/run/${0#./}.pid"
+while [ "$i" -lt "10" ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
