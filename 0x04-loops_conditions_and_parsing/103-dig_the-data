@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# big data report occurance ip status code sorted
+# by occurance in descending order
+
+./102-lets_parse_apache_logs|  awk -F, '{a[$1]++;}END{for (i in a)print a[i], i;}'  |sort -n -r 
