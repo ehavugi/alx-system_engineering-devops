@@ -2,4 +2,4 @@
 # big data report occurance ip status code sorted
 # by occurance in descending order
 
-./102-lets_parse_apache_logs|sort -n | uniq -c|sort -n -r  | awk '{print $1, $2, $3}' 
+./102-lets_parse_apache_logs|sort -n | uniq -c|sort -n -r | awk '{print "   ", $1, $2, $3}' 
