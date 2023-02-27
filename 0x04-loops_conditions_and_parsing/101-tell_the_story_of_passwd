@@ -16,6 +16,6 @@ do
 	userIDinfo=$(echo "$line" | cut -d : -f5)
 	homedir=$(echo "$line" | cut -d : -f6)
 	cmd=$(echo "$line" | cut -d : -f7)
-	echo  "The user $username is part of the  $_GUID gang, lives in $homedir and rides $cmd. $_UID's place is protected by the passcode $password, more info about the user here: $userIDinfo"
+	echo  "The user $username is part of the $_GUID gang, lives in $homedir and rides $cmd. $_UID's place is protected by the passcode $password, more info about the user here: $userIDinfo"
 	i=$((i+1))
 done
