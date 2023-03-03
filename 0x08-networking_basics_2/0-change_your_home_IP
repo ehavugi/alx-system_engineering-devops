@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# change localhost ip and name ip of facebook
+
+echo "8.8.8.8 facebook.com" >>/etc/hosts
+echo "172.0.0.2 localhost" >>/etc/hosts
