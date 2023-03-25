@@ -1,0 +1,23 @@
+What is a server
+computer that has software that serves clients requests in a a client-server architecture
+
+What is the role of the domain name
+readable address to servers. 
+
+
+What type of DNS record www is in www.foobar.com
+It is A record as it ipv4 and ties to foobar.com to an ip 
+
+What is the role of the web server
+respond to client requests. 
+
+What is the role of the application server
+To handle business logic like interaction with databases.
+It allows for webserver to focus on request handling with app server focus
+on a specialized request
+
+What is the role of the database?
+data storage and management
+
+What is the server using to communicate with the computer of the user requesting the website?
+tcp/ip protocol and http protocol for application

@@ -1,0 +1,5 @@
+Cluster of Load balance enhances availability and avoid Single Point of Failures
+Splitting components in different servers allows for scalability as each server can be independently updated. Due to diagramming limits I didn't add more copies of each but one can do so. 
+
+I added additional webserver to allow load balancing on server requests. Application and MYSQL app servers can also be deplicated and redunantly managed differently.
+

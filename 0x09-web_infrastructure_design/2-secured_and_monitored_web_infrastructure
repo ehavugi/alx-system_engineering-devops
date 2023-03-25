@@ -1,0 +1,7 @@
+Firewalls help secure the webserver
+
+1SSL certificate allows for https , which is secure communications with clients applications
+
+Log monitoring, works by sendind log data (collected on server) to another server which can be accessed live or later even when the servers are down. Allows for root cause analysis and fast recovery from a down time or predicting it
+
+terminating SSL at load balance leaves the communication with application and web server unencrypted which leave apps vulnerable to attacks and put an encryption and decryption burden on computational burden on load balancer.

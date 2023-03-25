@@ -1,0 +1,12 @@
+# Adding load balancer to use both servers and have redundancy.
+Load balance setup is active-active setup to receive requests in load balanced rotation
+
+#How a database Primary-Replica (Master-Slave) cluster works?
+the slave get master's updates or copy(replicate) and can take over if Master fail or under maintenance.
+After maintenance or fix the old master assumes slave role and have a copy of master's data and can take over ...
+
+#What is the difference between the Primary node and the Replica node in regard to the application?
+Primary node receives requests from client, while replicant nodes replicates the primary node
+# SPOF single point of failure
+is Load balancer, as currently client is routed to load balancer whose failure might translate into server down
+#
