@@ -20,7 +20,7 @@ case "${1:-''}" in
   
      'stop')
 	     trap  "echo manage_my_process stopped"  SIGTERM
-	    pkill -15 -f  manage_my_process
+	    pkill  -f  "manage_my_process"
 	    rm  -f "/var/run/my_process.pid"
 	    ;;
 
