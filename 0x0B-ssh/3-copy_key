@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Add alx-pub key to my server
+# one also  do it manually. edit ~/.ssh/authorized_keys
+cat alx-key.pub|ssh ubuntu@100.25.23.4 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
