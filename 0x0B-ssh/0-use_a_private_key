@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # log in to server with ssh key
 
-ssh -i ~/.ssh/school ubuntu@54.237.44.106
+ssh -i ~/.ssh/school ubuntu@100.25.23.4
