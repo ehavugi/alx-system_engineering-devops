@@ -1,22 +1,30 @@
 # Attack is the best defense
-[x] 0-sniffing
+- [x] 0-sniffing
+
 No other traffic was in or out (filtering was need)
 run tcpdump [install if not installed]
+
 ```console
 foo@bar:~$ tcpdump -w dump
 
 ```
 
 In a seperate shell run the alx executable [make executable if not already]
+
 ```console
 foo@bar:~$ ./alx
 ```
+
 open the dump in wireshark
+
 found a line with pass in it and extract it and used a base64 decoder to get the password
 
-[x] Dictionary attack
+- [x] Dictionary attack
 [source dictionary] (https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/xato-net-10-million-passwords.txt)
+
 reduced by using hint given to smaller dictionary
+
+
 ```python
 out = open("xato-11char.txt","w")
 with open("xato-net-10-million-passwords.txt") as f:
