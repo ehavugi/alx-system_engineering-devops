@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# file transfer given filepath, ip of server, user name of scp
+# path to ssh private key that scp uses
+
+if [ $# -lt 4 ]; then
+	echo 'Usage: 0-transfer_file COMMAND IP USERNAME PATH_TO_SSH_KEY'
+	exit 1
+fi
+
+CMD=$1
+host=$2
+username=$3
+identityFile=$4
+
+ssh "${username}@${host}" -i "$identityFile" "${CMD}"
