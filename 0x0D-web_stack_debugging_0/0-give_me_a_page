@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Fix apache2 server not returning a thing
-service apache2 start
+# find a running docker id and change restart apache2o
+name="$(docker ps --format '{{.ID}}' --filter 'status=running')"
+docker exec "$name" service apache2 start
