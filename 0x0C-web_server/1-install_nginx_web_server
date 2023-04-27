@@ -2,8 +2,10 @@
 # login into the server
 #ssh ubuntu@myserver
 # install nginx
-sudo apt -y install nginx
-
+if ! command -v nginx> /dev/null; then
+	echo  "Command not found! Installing nginx"
+	sudo apt-get -y install nginx
+fi
 # change default page
 echo Hello World!> /var/www/html/index.html
-sudo /etc/init.d/nginx reload
+sudo /etc/init.d/nginx restart
