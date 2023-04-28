@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# install nginx
+
+if ! command -v nginx> /dev/null; then
+        echo  "Command not found! Installing nginx"
+        sudo apt-get -y install nginx
+fi
+
+# configure Nginx to li llsten to por
+# change default pagej
+sudo sed -i '/^\tserver_name _;$/a \\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\tinternal;\n\t\treturn 404 "Ceci n'\''est pas une page\n\n";\n\t}' /etc/nginx/sites-available/default
+sudo service nginx restart
