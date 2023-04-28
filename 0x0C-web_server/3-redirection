@@ -9,4 +9,3 @@ fi
 # configure Nginx to li llsten to por
 sudo sed -i '/^\tlocation \/ {$/a \\n\tlocation \/redirect_me {\n\t\treturn 301 http:\/\/havugimana.tech/hello;\n\t}' /etc/nginx/sites-available/default
 # change default page
-sudo service nginx restart
