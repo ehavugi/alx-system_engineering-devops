@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # fix nginx server 0-nginx_likes_port_80
-#sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-enable/default
 cp "/etc/nginx/sites-available/default" "/etc/nginx/sites-enabled/default"
 service nginx restart
+rm -rf /var/run/nginx.pid
