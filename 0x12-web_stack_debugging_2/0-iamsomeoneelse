@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# run software as another user.
+#root@ubuntu:~# ./0-iamsomeoneelse www-data
+#www-data
+su -l "$1" -c whoami

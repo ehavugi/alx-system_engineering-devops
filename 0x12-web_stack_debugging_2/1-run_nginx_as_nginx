@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# restart nginx service as nginx user
+sudo chown -R nginx:nginx /etc/nginx
+sudo chown -R nginx:nginx /var/www
+sudo su -l nginx -c "service nginx restart"

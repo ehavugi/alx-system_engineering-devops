@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# list users on the sys
+cut -d: -f1 /etc/passwd
