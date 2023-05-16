@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# port forward 8080 to 80
+# tutorial used https://www.baeldung.com/linux/ufw-port-forward
+echo 'net/ipv4/ip_forward=1' |sudo tee -a /etc/ufw/sysctl.conf
+
+# add NAT table
+echo -e '*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80\nCOMMIT\n'|sudo tee -a /etc/ufw/before.rules
+echo y |sudo  ufw enable
+sudo  ufw reload
