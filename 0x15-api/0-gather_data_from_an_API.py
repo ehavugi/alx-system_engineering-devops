@@ -2,9 +2,10 @@
 """
 REST API call and processing
 """
+import json
 import requests
 import sys
-import json
+
 if __name__ == "__main__":
     response = requests.get("https://jsonplaceholder.typicode.com/todos/")
     id_ = sys.argv[1]
