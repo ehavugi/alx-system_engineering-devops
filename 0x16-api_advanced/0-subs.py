@@ -7,7 +7,7 @@ import requests
 def number_of_subscribers(subreddit):
     """ subReddit subscriber number
     """
-    url = "https://www.reddit.com/r/%s/about.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
