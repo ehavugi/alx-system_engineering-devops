@@ -13,9 +13,10 @@ def recurse(subreddit, hot_list=[], after=None):
     headers = {"User-Agent": "Mozilla/5.0"}
     if after:
         headers["after"] = after
-        response = requests.get(url + "?after=" + after, headers=headers)
+        response = requests.get(url + "?after=" + after,
+                                headers=headers, allow_redirects=False)
     else:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, allow_redirects=False)
 
     if response.status_code == 200:
         try:
