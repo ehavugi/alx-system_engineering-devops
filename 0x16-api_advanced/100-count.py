@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-Recursively find all hot topics from a subredit and
-return a list
+Recursively find all hot topics from a subredit.
+Print a structure statistics table of given keywords
 """
 import requests
 
 
 def count_words(subreddit, word_list,  hot_list=[], after=None, words={}):
-    """Recursively find all hot topics from a subredit
+    """Recursively find all hot topics from a subredit and get stats
+    about them
     """
     if len(word_list) == 0:
         return None
