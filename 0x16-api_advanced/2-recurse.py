@@ -9,7 +9,7 @@ import requests
 def recurse(subreddit, hot_list=[], after=None):
     """Recursively find all hot topics from a subredit
     """
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "Mozilla/5.0"}
     if after:
         headers["after"] = after
